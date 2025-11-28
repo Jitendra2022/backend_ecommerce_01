@@ -91,6 +91,7 @@ const verify = async (req, res) => {
 
       return res.status(200).json({
         message: "Email verified successfully",
+        success:true,
         user: {
           id: user._id,
           email: user.email,
