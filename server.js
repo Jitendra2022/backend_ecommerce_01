@@ -12,6 +12,10 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 app.use("/api/v1/user", userRoute);
+// Root route FIRST
+app.get("/", (req, res) => {
+  res.send("🚀 API is running...");
+});
 app.listen(PORT, () => {
   console.log(`server is listning at port:http://localhost:${PORT}`);
 });
